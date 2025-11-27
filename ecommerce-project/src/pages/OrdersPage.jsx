@@ -5,13 +5,15 @@ import { Header } from '../components/header';
 import { formatMoney } from '../utils/money';
 import './OrdersPage.css';
 export function OrdersPage({ cart }) {
-    const [order, setOrder] = useState([]);
+    const [orders, setOrder] = useState([]);
 
     useEffect(() => {
-        axios.get('/api/orders?expand=products')
-            .then((response) => {
+        const fetchOrders = async () => {
+        const response = await axios.get('/api/orders?expand=products')
                 setOrder(response.data);
-            });
+        };
+        fetchOrders();
+
     }, [])
     return (
         <>
@@ -23,7 +25,7 @@ export function OrdersPage({ cart }) {
                 <div className="page-title">Your Orders</div>
 
                 <div className="orders-grid">
-                    {OrdersPage.map((order) => {
+                    {orders.map((order) => {
                         return (
                             <div key={order.id} className="order-container">
 
