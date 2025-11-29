@@ -5,7 +5,7 @@ import './checkout-header.css';
 import './CheckoutPage.css';
 import { formatMoney } from '../utils/money';
 
-export function CheckoutPage({ cart }) {
+export function CheckoutPage({ cart,loadCart }) {
     const [deliveryOptions, setDeliveryOptions] = useState([]);
     const [paymentSummary, setPaymentSummary] = useState(null);
 
@@ -18,7 +18,7 @@ export function CheckoutPage({ cart }) {
             setPaymentSummary(response.data);
         };
         fetchCheckoutdata();
-    }, []);
+    }, [cart]);
     return (
         <>
             <title>Checkout</title>
@@ -94,10 +94,16 @@ export function CheckoutPage({ cart }) {
                                                 if (deliveryOption.priceCents > 0) {
                                                     priceString = `${formatMoney(deliveryOption.priceCents)} - Shipping`;
                                                 }
+
+                                                const updateDeliveryOption = async () => {
+                                                    await axios.put(`/api/cart-items/${cartItem.productId}` , {deliveryOptionId: deliveryOption.id});
+                                                    await loadCart();
+                                                }
                                                 return (
-                                                    <div key={deliveryOption.id} className="delivery-option">
+                                                    <div key={deliveryOption.id} className="delivery-option"
+                                                    onClick={updateDeliveryOption}>
                                                         <input type="radio"
-                                                            checked={deliveryOption.id === cartItem.DeliveryOptionId}
+                                                            checked={deliveryOption.id === cartItem.deliveryOptionId}
 
                                                             className="delivery-option-input"
                                                             name={`delivery-option-${cartItem.productId}`} />
