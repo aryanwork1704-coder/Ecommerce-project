@@ -20,27 +20,27 @@ A modern, full-stack e-commerce application built with **React + Vite** on the f
 
 ---
 
-## ✨ Features
+##  Features
 
 ### Frontend
-- 🎯 **Product Browsing**: Browse all products with images, ratings, and prices
-- 🛒 **Shopping Cart**: Add/remove items, update quantities, and view cart summary
-- 💳 **Checkout**: Select delivery options and review order before placing
-- 📦 **Order History**: View all past orders with product details and delivery dates
-- 📍 **Order Tracking**: Track package delivery status
-- 🔍 **Search** (UI ready, backend search available)
-- 📱 **Responsive Design**: Mobile-friendly interface
+-  **Product Browsing**: Browse all products with images, ratings, and prices
+-  **Shopping Cart**: Add/remove items, update quantities, and view cart summary
+-  **Checkout**: Select delivery options and review order before placing
+-  **Order History**: View all past orders with product details and delivery dates
+-  **Order Tracking**: Track package delivery status
+-  **Search** (UI ready, backend search available)
+-  **Responsive Design**: Mobile-friendly interface
 
 ### Backend
-- 🔄 **RESTful API**: Full CRUD operations for products, cart, orders, and deliveries
-- 💾 **Database Flexibility**: SQLite for development, MySQL/PostgreSQL for production
-- 🔐 **CORS Support**: Secure cross-origin requests
-- 📊 **Payment Summary**: Automatic calculation of totals with tax
-- 🔄 **Smart Cart Management**: Quantity aggregation and delivery option selection
+-  **RESTful API**: Full CRUD operations for products, cart, orders, and deliveries
+-  **Database Flexibility**: SQLite for development, MySQL/PostgreSQL for production
+-  **CORS Support**: Secure cross-origin requests
+-  **Payment Summary**: Automatic calculation of totals with tax
+-  **Smart Cart Management**: Quantity aggregation and delivery option selection
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **React 19** - UI framework with hooks
@@ -65,7 +65,7 @@ A modern, full-stack e-commerce application built with **React + Vite** on the f
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 React-Project/
@@ -119,7 +119,7 @@ React-Project/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -273,7 +273,7 @@ npm run lint         # Run ESLint
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 ### Backend Deployment (e.g., AWS, Heroku)
 1. Set `RDS_*` environment variables for your database
@@ -288,7 +288,7 @@ npm run lint         # Run ESLint
 
 ---
 
-## 📝 Notes
+##  Notes
 
 - **Default Data**: Database auto-loads sample products and delivery options on first run
 - **Database Persistence**: SQLite saves to `database.sqlite` file
@@ -298,13 +298,13 @@ npm run lint         # Run ESLint
 
 ---
 
-## 📄 License
+##  License
 
 This project is open source and available for educational purposes.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Feel free to:
 1. Fork the repository
